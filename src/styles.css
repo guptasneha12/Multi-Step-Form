@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: url("./assets/image.jpg") no-repeat center center/cover;
+  backdrop-filter: blur(5px);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.form-container {
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent */
+  backdrop-filter: blur(10px); /* Increased blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Support for Safari */
+  padding: 40px;
+  max-width: 800px;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Enhanced shadow for better contrast */
+  text-align: center;
+}
+
+.form-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: black;
+  font-weight: 700;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.personal {
+  color: rgb(13, 13, 116);
+}
+
+.form-group label {
+  color: black; /* Changed to black for better contrast */
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 100%; /* Adjusting width to fix padding/margin issues */
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Slight border for input fields */
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent input background */
+  color: black; /* Changed text color for better readability */
+  outline: none;
+  transition: 0.3s ease-in-out;
+  text-align: left; /* Ensure text is aligned properly */
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+  background: rgba(255, 255, 255, 0.055);
+  border: 2px solid #ff5252;
+}
+
+button {
+  padding: 10px 10px;
+  margin: 3px;
+  background-color: #ff5252;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #ff3333;
+}
+
+.remember-me-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  justify-content: flex-start;
+}
+
+.remember-me-container input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.remember-me-container label {
+  color: white;
+}
+ul {
+  list-style: none; /* Removes bullet points */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+}
+
+li {
+  padding: 5px 0; /* Optional: Adds some spacing between list items */
+}
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: -60px auto 20px;
+  background: url("./assets/image.jpg") no-repeat center center/cover; /* Use uploaded image */
+  backdrop-filter: blur(10px);
+  border: 3px solid white;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: -10px;
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  button {
+    padding: 10px;
+  }
+}
